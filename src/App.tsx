@@ -1,16 +1,20 @@
-import { BrowserRouter } from "react-router-dom";
-import MainLayout from './layouts/MainLayout'; // შემოგვაქვს ჩვენი ლეიაუტი
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Catalog from './pages/Catalog';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <BrowserRouter>
       <MainLayout>
-        {/* აქ დროებით ჩავსვათ ტექსტი, სანამ Hero სექციას ავაწყობთ */}
-        <div className="flex items-center justify-center py-20">
-          <h1 className="text-3xl font-bold text-rose-600">
-            მთავარი გვერდის კონტენტი აქ იქნება!
-          </h1>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </MainLayout>
     </BrowserRouter>
   );
