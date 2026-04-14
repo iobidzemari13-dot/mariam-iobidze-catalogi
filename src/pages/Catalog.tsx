@@ -1,29 +1,66 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Section from '../components/Section';
 import Card from '../components/Card';
-import Button from '../components/Button';
 
 const Catalog = () => {
-  
-  const [filter, setFilter] = useState('all');
+  const [items, setItems] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        
+        const response = await fetch('https://fakestoreapi.com/products/category/jewelery');
+        
+        if (!response.ok) {
+          throw new Error('მონაცემები ვერ ჩაიტვირთა');
+        }
+
+        const data = await response.json();
+        setItems(data);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <Section title="ჩვენი კოლექცია" bgGray={true}>
       
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        
-        <Button onClick={() => setFilter('all')} variant={filter === 'all' ? 'primary' : 'outline'}>ყველა</Button>
-        <Button onClick={() => setFilter('rings')} variant={filter === 'rings' ? 'primary' : 'outline'}>ბეჭდები</Button>
-        <Button onClick={() => setFilter('earrings')} variant={filter === 'earrings' ? 'primary' : 'outline'}>საყურეები</Button>
-        <Button onClick={() => setFilter('necklaces')} variant={filter === 'necklaces' ? 'primary' : 'outline'}>ყელსაბამები</Button>
-      </div>
+      {/* 1. Loading სტატუსი */}
+      {loading && (
+        <div className="text-center py-10 text-rose-600 font-medium">
+          იტვირთება კოლექცია...
+        </div>
+      )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        
-        <Card title="მარგალიტის საყურე" image="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500" description="ნაზი მარგალიტით." />
-        <Card title="ვერცხლის ბეჭედი" image="https://images.unsplash.com/photo-1605100804763-247f6612d543?w=500" description="მინიმალისტური დიზაინი." />
-        <Card title="ოქროს ყელსაბამი" image="https://images.unsplash.com/photo-1599643478514-4a420804ce71?w=500" description="ელეგანტური სტილი." />
-      </div>
+      {/* 2. Error სტატუსი */}
+      {error && (
+        <div className="text-center py-10 text-red-500">
+          შეცდომა: {error}
+        </div>
+      )}
+
+      {/* 3. მონაცემების გამოჩენა */}
+      {!loading && !error && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {items.map((product) => (
+            <Card 
+              key={product.id}
+              title={product.title}
+              image={product.image}
+              description={`${product.description.substring(0, 100)}...`}
+            />
+          ))}
+        </div>
+      )}
     </Section>
   );
 };
