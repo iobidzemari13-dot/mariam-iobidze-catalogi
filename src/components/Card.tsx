@@ -1,3 +1,4 @@
+import { memo } from 'react'; 
 import Button from "./Button";
 
 interface CardProps {
@@ -6,16 +7,16 @@ interface CardProps {
   description: string;
 }
 
-const Card = ({ title, image, description }: CardProps) => {
+
+const Card = memo(({ title, image, description }: CardProps) => {
   return (
-    
     <div className="bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-105">
       
       <div className="relative h-64 overflow-hidden">
         <img 
           src={image} 
           alt={title} 
-          
+          loading="lazy" 
           className="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
         />
       </div>
@@ -31,6 +32,6 @@ const Card = ({ title, image, description }: CardProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default Card;
