@@ -65,7 +65,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <div 
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100 border-t border-gray-100 dark:border-gray-800' : 'max-h-0 opacity-0'}`}
       >

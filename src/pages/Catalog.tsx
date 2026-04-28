@@ -30,7 +30,6 @@ const Catalog = () => {
           throw new Error('მონაცემების ჩატვირთვა ვერ მოხერხდა');
         }
         const data = await response.json();
-        // ხელოვნური შეყოვნება (სიმულაციისთვის)
         setTimeout(() => {
           setProducts(data);
           setIsLoading(false);
