@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-BubAQEGu.js";var t=e(),n=()=>(0,t.jsxs)(`div`,{className:`flex flex-col items-center justify-center py-20`,children:[(0,t.jsx)(`h1`,{className:`text-6xl font-bold text-rose-600`,children:`404`}),(0,t.jsx)(`p`,{className:`text-xl mt-4 dark:text-gray-100 transition-colors duration-300`,children:`გვერდი ვერ მოიძებნა!`})]});export{n as default};

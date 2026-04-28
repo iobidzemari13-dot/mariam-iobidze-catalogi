@@ -6,7 +6,7 @@ interface CartItem {
   title: string;
   price: number;
   image: string;
-  quantity: number; // ახალი ველი
+  quantity: number; 
 }
 
 interface CartState {

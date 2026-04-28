@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "ბეჭედი",
+    "price": 150,
+    "category": "rings",
+    "description": "ელეგანტური ბეჭედი",
+    "image": "/assets/silver.webp"
+  },
+  {
+    "id": 2,
+    "title": "ბრილიანტი",
+    "price": 1200,
+    "category": "rings",
+    "description": "უმაღლესი ხარისხის ბრილიანტის ნაკეთობა",
+    "image": "/assets/brilianti.webp"
+  },
+  {
+    "id": 4,
+    "title": "საყურე",
+    "price": 250,
+    "category": "earrings",
+    "description": "ულამაზესი კლასიკური საყურე",
+    "image": "/assets/sayure.webp"
+  },
+  {
+    "id": 5,
+    "title": "სვაროვსკი",
+    "price": 350,
+    "category": "necklaces",
+    "description": "სვაროვსკის თვლებით გაწყობილი ნაკეთობა",
+    "image": "/assets/svarovski.webp"
+  },
+  {
+    "id": 6,
+    "title": "ბრილიანტის ყელსაბამი",
+    "price": 1500,
+    "category": "necklaces",
+    "description": "მომხიბლავი ბრილიანტის ყელსაბამი",
+    "image": "/assets/briliantisyelsabami.webp"
+  },
+  {
+    "id": 7,
+    "title": "საყურე ლურჯი ქვით",
+    "price": 200,
+    "category": "earrings",
+    "description": "ბზინვარე კრისტალის სამკაული",
+    "image": "/assets/kristali.webp"
+  },
+  {
+    "id": 8,
+    "title": "ყელსაბამი",
+    "price": 200,
+    "category": "necklaces",
+    "description": "მდიდრული",
+    "image": "/assets/b.webp"
+  },
+  {
+    "id": 9,
+    "title": "ბეჭედი ლურჯი თვლით ვერცხლის",
+    "price": 1600,
+    "category": "rings",
+    "description": "ელეგანტური ბეჭედი",
+    "image": "/assets/lurjibejedi.webp"
+  },
+  {
+    "id": 10,
+    "title": "ოქროს საყურე",
+    "price": 2500,
+    "category": "earrings",
+    "description": "ულამაზესი ოქროს საყურე",
+    "image": "/assets/oqrosbewedi.webp"
+  }
+]

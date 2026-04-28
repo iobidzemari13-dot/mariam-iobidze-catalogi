@@ -15,11 +15,11 @@ const About = () => {
         
     
         <div className="w-full md:w-1/2 space-y-6">
-          <h3 className="text-2xl font-serif text-gray-900">გამარჯობა!</h3>
-          <p className="text-gray-600 leading-relaxed text-lg">
+          <h3 className="text-2xl font-serif text-gray-900 dark:text-white transition-colors duration-300">გამარჯობა!</h3>
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg transition-colors duration-300">
             მე ვარ ხელნაკეთი ნივთების დიზაინერი. ჩემი გატაცება სამკაულების შექმნით წლების წინ დაიწყო და დღეს ის ჩემი ყოველდღიურობის განუყოფელი ნაწილია.
           </p>
-          <p className="text-gray-600 leading-relaxed text-lg">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg transition-colors duration-300">
             თითოეულ ნივთს ვქმნი დიდი სიყვარულით, ყურადღებას ვაქცევ უმცირეს დეტალებს და ვიყენებ მხოლოდ მაღალი ხარისხის მასალებს, რათა თქვენამდე სრულყოფილი პროდუქტი მოვიდეს.
           </p>
         </div>

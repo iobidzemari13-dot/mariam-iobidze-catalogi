@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
@@ -16,18 +16,18 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-4 transition-colors duration-300">
               კონტაქტი
             </h4>
             <ul className="text-gray-500 text-sm space-y-3">
-              <li>ტელ: +995 555 12 34 56</li>
-              <li>ელ-ფოსტა: hello@princess.ge</li>
+              <li>ტელ: 5 9 8 25 33 95</li>
+              <li>ელ-ფოსტა: princessjewelry.com</li>
               <li>მისამართი: ქუთაისი, საქართველო</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-4 transition-colors duration-300">
               სოციალური ქსელები
             </h4>
             <div className="flex flex-col space-y-3 text-sm">
@@ -37,15 +37,12 @@ const Footer = () => {
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-rose-500 transition duration-300">
                 Facebook
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-rose-500 transition duration-300">
-                TikTok
-              </a>
             </div>
           </div>
 
         </div>
         
-        <div className="border-t border-gray-100 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-100 dark:border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center transition-colors duration-300">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Princess Jewelry. ყველა უფლება დაცულია.
           </p>

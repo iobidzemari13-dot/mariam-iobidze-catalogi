@@ -1,14 +1,14 @@
-import { memo } from 'react'; 
+import { memo, type ReactNode } from 'react'; 
 
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
-  children: any; 
-  onClick?: any; 
+  children: ReactNode; 
+  onClick?: () => void; 
+  className?: string;
 }
 
-
-const Button = memo(({ variant = 'primary', children, onClick }: ButtonProps) => {
-  let baseStyle = "px-6 py-2 font-medium transition-all duration-300 rounded-md text-sm md:text-base tracking-wide active:scale-95 ";
+const Button = memo(({ variant = 'primary', children, onClick, className = '' }: ButtonProps) => {
+  let baseStyle = "px-6 py-2 font-medium transition-all duration-300 rounded-md text-sm md:text-base tracking-wide active:scale-95 " + className + " ";
   
   if (variant === 'primary') {
     baseStyle += "bg-primary text-white hover:opacity-90 shadow-sm";
